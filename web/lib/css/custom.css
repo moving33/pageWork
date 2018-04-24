@@ -1,0 +1,17 @@
+
+
+/*mainPage*/
+
+.jumbotron,.jumbotron > p ,.jumbotron > .display-1{
+    background-image: url("../../lib/img/main/mainP-1.jpg");
+    background-size: cover;
+    font-weight: 900;
+    line-height: 1.7;
+    text-align: left;
+    color: unset;
+}
+
+#carouselControls{
+    margin: auto;
+    width: 65%;
+}
