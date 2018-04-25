@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wang Museum - Location Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../lib/css/full-width-pics.css" rel="stylesheet">
+    <link href="../lib/css/custom.css" rel="stylesheet">
+
+    <!-- jQeury Ui -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+</head>
+
+<body>
+<!-- 상단 nav bar -->
+<nav class="navbar navbar-expand-md fixed-top" style="background-color: cadetblue;">
+    <a class="navbar-brand" href="#" style="color: white">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html" style="color: white">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white">Location</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false" style="color: white">Board</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">게시판</a>
+                    <a class="dropdown-item" href="#">Q & A</a>
+                    <a class="dropdown-item" href="#">Support</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Header - set the background image for the header in the line below
+<header class="py-5 bg-image-full" style=
+        "background-image: url('https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixlib=rb-0.3.5&s=8694b70fa614d40b7929434fa7a11a5a&auto=format&fit=crop&w=1950&q=80');
+            height: 250px">
+    &lt;!&ndash; Logo처리시 사용 &ndash;&gt;
+    &lt;!&ndash;<img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">&ndash;&gt;
+</header>
+-->
+
+<section class="py-5">
+    <div class="row" style="width:100%;">
+        <div class="container col-3" style="float: left; text-align: center">
+            <h1 class="badge-info">찾아오시는길</h1>
+            <br>
+
+            <div id="tabs" style="text-align: left">
+                <ul>
+                    <li><a href="#tabs-1">대중 교통</a></li>
+                    <li><a href="#tabs-2">자기 차량</a></li>
+                    <li><a href="#tabs-3">주차 안내</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p><b>지하철</b>
+                        <br>
+                        2호선 / 왕십리
+                        <br>
+                        왕십리역 2호선 2번출구 방향 '박물관 나들길'⇔박물관 서문
+                        <br>
+                        5호선 : 왕십리 하차 -> 2호선 출구 통로 이용 -> 2번 출구
+                        <br>
+                        공원 개방시간
+                        - 월,화,목,금요일(평일) : 07:00 ~ 19:00
+                        <br>
+                        - 수,토요일(야간 개장일) : 07:00 ~ 22:00
+                        <br>
+                        - 일요일,공휴일 : 07:00 ~ 20:00</p>
+                </div>
+                <div id="tabs-2">
+                </div>
+                <div id="tabs-3">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9" id="map" style="width: 75%; height: 420px; position: relative; overflow: hidden;"></div>
+    </div>
+</section>
+
+<!--
+ Content section
+<section class="py-5">
+    &lt;!&ndash; naver api Map &ndash;&gt;
+    <div id="map" style="width: 80%; margin-left: 10%; height:400px;"></div>
+</section>
+-->
+<!-- Content section -->
+<!--<div id="tabs" style="width: 50%;margin-left: 24%">
+    <ul>
+        <li><a href="#tabs-1">대중 교통</a></li>
+        <li><a href="#tabs-2">자기 차량</a></li>
+        <li><a href="#tabs-3">주차 안내</a></li>
+    </ul>
+    <div id="tabs-1">
+        <p><b>지하철</b>
+            <br>
+            2호선 / 왕십리
+            <br>
+            왕십리역 2호선 2번출구 방향 '박물관 나들길'⇔박물관 서문
+            <br>
+            5호선 : 왕십리 하차 -> 2호선 출구 통로 이용 -> 2번 출구
+            <br>
+            공원 개방시간
+            - 월,화,목,금요일(평일) : 07:00 ~ 19:00
+            <br>
+            - 수,토요일(야간 개장일) : 07:00 ~ 22:00
+            <br>
+            - 일요일,공휴일 : 07:00 ~ 20:00</p>
+    </div>
+    <div id="tabs-2">
+    </div>
+    <div id="tabs-3">
+
+    </div>
+</div>-->
+
+<!--Image Section - set the background image for the header in the line below-->
+<div class="py-5 bg-image-full" style="background-image: url('https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixlib=rb-0.3.5&s=8694b70fa614d40b7929434fa7a11a5a&auto=format&fit=crop&w=1950&q=80');
+            height: 200px">
+    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+    <div style="height: 200px;">
+
+    </div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<!-- Footer -->
+<footer class="py-3 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; J 2018</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Google Map Script -->
+<script>
+    function initMap() {
+        var uluru = {lat: 37.562194, lng: 127.035173};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../lib/js/bootstrap.bundle.min.js"></script>
+
+<!-- Google MAP API -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRy6xrYg82IYlynQSDi0_k4INLBPghLTs&callback=initMap">
+</script>
+</body>
+
+</html>

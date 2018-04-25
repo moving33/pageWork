@@ -15,3 +15,9 @@
     margin: auto;
     width: 65%;
 }
+
+.whiteColor{
+    text-align: right;
+    color: floralwhite;
+    font-weight: lighter;
+}
